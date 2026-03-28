@@ -97,14 +97,14 @@ jobs:
         if: ${{ env.AWS_ROLE_TO_ASSUME_SECRET != '' }}
         uses: aws-actions/configure-aws-credentials@v4
         with:
-          aws-region: us-east-1
+          aws-region: ${{ env.AWS_REGION }}
           role-to-assume: ${{ env.AWS_ROLE_TO_ASSUME_SECRET }}
 
       - name: Configure AWS credentials with access keys
         if: ${{ env.AWS_ROLE_TO_ASSUME_SECRET == '' }}
         uses: aws-actions/configure-aws-credentials@v4
         with:
-          aws-region: us-east-1
+          aws-region: ${{ env.AWS_REGION }}
           aws-access-key-id: ${{ env.AWS_ACCESS_KEY_ID_SECRET }}
           aws-secret-access-key: ${{ env.AWS_SECRET_ACCESS_KEY_SECRET }}
           aws-session-token: ${{ env.AWS_SESSION_TOKEN_SECRET }}
@@ -136,14 +136,14 @@ jobs:
         if: ${{ env.AWS_ROLE_TO_ASSUME_SECRET != '' }}
         uses: aws-actions/configure-aws-credentials@v4
         with:
-          aws-region: us-east-1
+          aws-region: ${{ env.AWS_REGION }}
           role-to-assume: ${{ env.AWS_ROLE_TO_ASSUME_SECRET }}
 
       - name: Configure AWS credentials with access keys
         if: ${{ env.AWS_ROLE_TO_ASSUME_SECRET == '' }}
         uses: aws-actions/configure-aws-credentials@v4
         with:
-          aws-region: us-east-1
+          aws-region: ${{ env.AWS_REGION }}
           aws-access-key-id: ${{ env.AWS_ACCESS_KEY_ID_SECRET }}
           aws-secret-access-key: ${{ env.AWS_SECRET_ACCESS_KEY_SECRET }}
           aws-session-token: ${{ env.AWS_SESSION_TOKEN_SECRET }}
@@ -182,14 +182,14 @@ jobs:
         if: ${{ env.AWS_ROLE_TO_ASSUME_SECRET != '' }}
         uses: aws-actions/configure-aws-credentials@v4
         with:
-          aws-region: us-east-1
+          aws-region: ${{ env.AWS_REGION }}
           role-to-assume: ${{ env.AWS_ROLE_TO_ASSUME_SECRET }}
 
       - name: Configure AWS credentials with access keys
         if: ${{ env.AWS_ROLE_TO_ASSUME_SECRET == '' }}
         uses: aws-actions/configure-aws-credentials@v4
         with:
-          aws-region: us-east-1
+          aws-region: ${{ env.AWS_REGION }}
           aws-access-key-id: ${{ env.AWS_ACCESS_KEY_ID_SECRET }}
           aws-secret-access-key: ${{ env.AWS_SECRET_ACCESS_KEY_SECRET }}
           aws-session-token: ${{ env.AWS_SESSION_TOKEN_SECRET }}
