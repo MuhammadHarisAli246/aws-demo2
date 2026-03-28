@@ -94,7 +94,7 @@ jobs:
           fi
 
       - name: Configure AWS credentials with OIDC
-        if: ${{ env.AWS_ROLE_TO_ASSUME_SECRET != '' }}
+        if: false
         uses: aws-actions/configure-aws-credentials@v4
         with:
           aws-region: ${{ env.AWS_REGION }}
