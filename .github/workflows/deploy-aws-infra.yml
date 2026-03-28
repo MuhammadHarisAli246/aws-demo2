@@ -105,8 +105,8 @@ jobs:
         uses: aws-actions/configure-aws-credentials@v4
         with:
           aws-region: ${{ env.AWS_REGION }}
-          aws-access-key-id: ${{ env.AWS_ACCESS_KEY_ID }}
-          aws-secret-access-key: ${{ env.AWS_SECRET_ACCESS_KEY }}
+          aws-access-key-id: ${{ env.AWS_ACCESS_KEY_ID_SECRET }}
+          aws-secret-access-key: ${{ env.AWS_SECRET_ACCESS_KEY_SECRET }}
           aws-session-token: ${{ env.AWS_SESSION_TOKEN_SECRET }}
 
       - name: Validate VPC template
