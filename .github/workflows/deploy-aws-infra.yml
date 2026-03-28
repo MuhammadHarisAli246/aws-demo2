@@ -55,7 +55,7 @@ concurrency:
   cancel-in-progress: false
 
 env:
-  AWS_REGNIO: ${{ github.event.inputs.aws_region || vars.AWS_REGION || 'us-east-1' }}
+  AWS_REGION: ${{ github.event.inputs.aws_region || vars.AWS_REGION || 'us-east-1' }}
   ENVIRONMENT_NAME: ${{ github.event.inputs.environment_name || vars.ENVIRONMENT_NAME || 'prod' }}
   VPC_STACK_NAME: ${{ github.event.inputs.vpc_stack_name || vars.VPC_STACK_NAME || 'prod-vpc-stack' }}
   ALB_STACK_NAME: ${{ github.event.inputs.alb_stack_name || vars.ALB_STACK_NAME || 'prod-alb-stack' }}
